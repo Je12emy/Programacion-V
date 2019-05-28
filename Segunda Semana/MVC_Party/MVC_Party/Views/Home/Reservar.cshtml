@@ -1,0 +1,33 @@
+﻿@model MVC_Party.Models.Guests
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Reservar</title>
+</head>
+<body>
+    <div>
+
+        <!-- Inicializa un form -->
+
+        @using (Html.BeginForm())                                   
+        {
+            <p> Ingrese su Nombre: @Html.TextBoxFor(x => x.Nombre)       </p> <!-- Crear un textBox para el form, (x => x.Nombre)  se refiere al modele que esta vinculado-->
+            <p> Ingrese su Celular: @Html.TextBoxFor(x => x.Celular)     </p>
+            <p> Ingrese su Correo: @Html.TextBoxFor(x => x.Email)        </p>
+            <p> Asistira?: @Html.DropDownListFor(x => x.Asistencia, new[]
+{
+                          new SelectListItem() { Text = "Si, voy a asistir", Value = bool.TrueString},
+                          new SelectListItem() { Text = "No, no voy a asistir", Value = bool.FalseString}
+})  </p>
+        }
+
+    </div>
+</body>
+</html>
