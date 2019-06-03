@@ -4,15 +4,34 @@
 }
 
 <!DOCTYPE html>
-
 <html>
 <head>
+    <link href=@Url.Content("~/Styles/main.css") rel="stylesheet" />
+    @RenderSection("Styles", false)
+    <link href="~/Content/bootstrap-grid.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+
 </head>
+
 <body>
+    @RenderBody()
+    <div class="container">  
+        <!-- Linea superior de la pagina web -->
+        <div class="row">
+            <div class="col-12">
+                <h1> Ultra </h1>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    
     <div>
-        <h1 style="text-align:center"> Fiesta privada en la Cali </h1>
         <hr>
         <h3 style="text-align:center; font-size:medium"> Sabado 1ro de Junio </h3>
         <h3 style="text-align:center; font-size:small"> Hora: 8:00pm hasta las 5:00 am </h3>
@@ -21,14 +40,14 @@
     </div>
     
     <div style="text-align:center">
-        <img src="~/Recursos/index_main.png">
+       <img src="~/Recursos/index_main.png">
     </div>
 
     <div style="text-align:center; font-size:large">
         @Html.ActionLink("Reservar ahora","Reservar") <!-- Enlace a una otra Vista. -->
     </div>
 
-    <br />
+    <br/>
 
     <div style="text-align:center">
 
