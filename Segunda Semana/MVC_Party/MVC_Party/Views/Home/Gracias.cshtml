@@ -1,0 +1,52 @@
+﻿@model MVC_Party.Models.Guests
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Gracias</title>
+</head>
+<body>
+    @{ 
+        try
+        {
+            WebMail.SmtpServer = "smtp.example.com";
+            WebMail.SmtpPort = 587;
+            WebMail.EnableSsl = true;
+            WebMail.UserName = "mySmtpUsername";
+            WebMail.Password = "mySmtpPassword";
+            WebMail.From = "rspv@example.com";
+
+            WebMail.Send("part-host@example.com", "RSPV Notification",
+            Model.Nombre + "si" + ((Model.Asistencia ?? false) ? "" : "no") + "atendera");
+
+
+        }
+        catch (Exception)
+        {
+            @: <b> Perdon - no logramos enviar el correo desde tu RSVP. </B>
+        }
+    }
+
+
+
+    <div> 
+        <h1 style="text-align:center"> Thank you , @Model.Nombre </h1>
+        <div>
+            @if (Model.Asistencia == true)
+            {
+                @: Que bien que asistiras.
+            }
+            else
+            {
+                @: Que mal que no asistiras te esperaremos para la proxima.
+            }
+            </div>
+    </div>
+</body>
+</html>
