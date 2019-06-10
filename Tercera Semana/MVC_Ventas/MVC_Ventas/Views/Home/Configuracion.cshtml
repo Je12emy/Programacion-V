@@ -1,0 +1,45 @@
+﻿<!--Enlazar el model aca y pasar los datos-->
+@model MVC_Ventas.Models.Workers
+
+@{
+    //MVC_Ventas.Models.Workers w = new MVC_Ventas.Models.Workers();
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Configuracion</title>
+</head>
+<body>
+
+    <div>
+        @*@{ 
+//MVC_Ventas.Models.Workers w = new MVC_Ventas.Models.Workers();
+            <h1 class="display-1"> @w.name[0] </h1>
+        }*@
+
+        @*@Model.name[0].ToString()*@
+        <h1 class="display-1"> Configuración </h1>
+        <h1> @Model.code[0] </h1>
+        <div style="text-align:center">
+            @*@using (Html.BeginForm())
+            {
+                //Form para alterar los datos guardados en el modelo de datos.
+                <p>
+                    Escoja a ID de empleado: @Html.DropDownListFor(x => x.code, new[]
+                          {
+                          new SelectListItem() { Text = @Model.code[0].ToString()},
+                          new SelectListItem() { Text = @Model.code[1].ToString()},
+                          new SelectListItem() { Text = @Model.code[2].ToString()},
+                          new SelectListItem() { Text = @Model.code[3].ToString()},
+                          })
+                </p>
+            }*@
+        </div>
+    </div>
+</body>
+
+</html>
