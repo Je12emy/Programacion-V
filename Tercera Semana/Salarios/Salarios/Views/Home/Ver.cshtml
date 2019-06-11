@@ -1,0 +1,75 @@
+﻿@model Salarios.Models.Datos
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ver</title>
+</head>
+<body style="background-color:black;color:white">
+    <div> 
+        <h1 style="text-align:center ">Datos de Planilla</h1>
+        <style>table, th, td {border: 1px solid}</style>
+        <h2>Libreria El Cinco Menos</h2>
+        <h3>Planilla al @DateTime.Now.ToString("dd.MM.yyy")</h3>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Semanal</th>
+                <th>Comisiones</th>
+                <th>Deducciones</th>
+                <th>Salario Neto</th>
+            </tr>
+            <tr>
+                <th>Jorge Soto</th>
+                @*<th>18000</th>*@
+                <th>@Model.Semanal(Model.Base11)</th>
+                <th>@Model.Comisiones(Model.Ventas11)</th>
+                <th>@Model.Deducciones(Model.Semanal(Model.Base11), Model.Comisiones(Model.Ventas11))</th>
+                <th>@Model.Neto(Model.Semanal(Model.Base11), Model.Comisiones(Model.Ventas11), (Model.Deducciones(Model.Semanal(Model.Base11), Model.Comisiones(Model.Ventas11))) )</th>
+            </tr>
+            <tr>
+                <th>Ana Mendez</th>
+                <th>@Model.Semanal(Model.Base12)</th>
+                <th>@Model.Comisiones(Model.Ventas12)</th>
+                <th>@Model.Deducciones(Model.Semanal(Model.Base12), Model.Comisiones(Model.Ventas12))</th>
+                <th>@Model.Neto(Model.Semanal(Model.Base12), Model.Comisiones(Model.Ventas12), (Model.Deducciones(Model.Semanal(Model.Base12), Model.Comisiones(Model.Ventas12))))</th>
+            </tr>
+            <tr>
+                <th>Oscar Segura</th>
+                <th>@Model.Semanal(Model.Base13)</th>
+                <th>@Model.Comisiones(Model.Ventas13)</th>
+                <th>@Model.Deducciones(Model.Semanal(Model.Base13), Model.Comisiones(Model.Ventas13))</th>
+                <th>@Model.Neto(Model.Semanal(Model.Base13), Model.Comisiones(Model.Ventas13), (Model.Deducciones(Model.Semanal(Model.Base13), Model.Comisiones(Model.Ventas13))))</th>
+            </tr>
+            <tr>
+                <th>David Hurtado</th>
+                <th>@Model.Semanal(Model.Base14)</th>
+                <th>@Model.Comisiones(Model.Ventas14)</th>
+                <th>@Model.Deducciones(Model.Semanal(Model.Base14), Model.Comisiones(Model.Ventas14))</th>
+                <th>@Model.Neto(Model.Semanal(Model.Base14), Model.Comisiones(Model.Ventas14), (Model.Deducciones(Model.Semanal(Model.Base14), Model.Comisiones(Model.Ventas14))))</th>
+            </tr>
+            <tr>
+                <th>Susana Araya</th>
+                <th>@Model.Semanal(Model.Base15)</th>
+                <th>@Model.Comisiones(Model.Ventas15)</th>
+                <th>@Model.Deducciones(Model.Semanal(Model.Base15), Model.Comisiones(Model.Ventas15))</th>
+                <th>@Model.Neto(Model.Semanal(Model.Base15), Model.Comisiones(Model.Ventas15), (Model.Deducciones(Model.Semanal(Model.Base15), Model.Comisiones(Model.Ventas15))))</th>
+            </tr>
+            <tr>
+                <th>Luis Segura</th>
+                <th>@Model.Semanal(Model.Base21)</th>
+                <th>No Aplica</th>
+                <th>@Model.Deducciones(Model.Semanal(Model.Base21), Model.Comisiones(Model.Ventas21))</th>
+                <th>@Model.Neto(Model.Semanal(Model.Base21), Model.Comisiones(Model.Ventas21), (Model.Deducciones(Model.Semanal(Model.Base21), Model.Comisiones(Model.Ventas21))))</th>
+            </tr>
+
+        </table>
+        <p>@Html.ActionLink("Aceptar","Index")</p>
+    </div>
+</body>
+</html>

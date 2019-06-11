@@ -1,0 +1,77 @@
+﻿@model Salarios.Models.Datos
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ingresar</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body style=" background-color:black; color:white  ">
+    <div> 
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary()
+            <h1 style="text-align:center">Ingreso de Datos</h1>
+            <style>table, th, td {border: 1px solid}</style>
+        <table style="color:white  ">
+        <tr>
+            <th>Codigo</th>
+            <th>Puesto</th>
+            <th>Nombre</th>
+            <th>Salario Base</th>
+            <th>Ventas</th>
+        </tr>
+        <tr>
+            <th>11</th>
+            <th>Vendedor</th>
+            <th>Jorge Soto</th>
+            <th>80,000</th>
+            <th>@Html.TextBoxFor(x => x.Ventas11, new { @class = "form-control" })</th>
+        </tr>
+            <tr>
+                <th>12</th>
+                <th>Vendedor</th>
+                <th>Ana Mendez</th>
+                <th>87,000</th>
+                <th>@Html.TextBoxFor(x => x.Ventas12, new { @class = "form-control" })</th>
+            </tr>
+            <tr>
+                <th>13</th>
+                <th>Vendedor</th>
+                <th>Oscar Segura</th>
+                <th>84,000</th>
+                <th>@Html.TextBoxFor(x => x.Ventas13, new { @class = "form-control" })</th>
+            </tr>
+            <tr>
+                <th>14</th>
+                <th>Vendedor</th>
+                <th>David Hurtado</th>
+                <th>85,000</th>
+                <th>@Html.TextBoxFor(x => x.Ventas14, new { @class = "form-control" })</th>
+            </tr>
+            <tr>
+                <th>15</th>
+                <th>Vendedor</th>
+                <th>Susana Araya</th>
+                <th>73,000</th>
+                <th>@Html.TextBoxFor(x => x.Ventas15, new { @class = "form-control" })</th>
+            </tr>
+            <tr>
+                <th>21</th>
+                <th>Contador</th>
+                <th>Luis Segura</th>
+                <th>187,000</th>
+                <th>No Aplica</th>
+            </tr>
+    </table>
+       <p><input class="btn btn-success" type="submit" value="Aceptar" /></p>
+        }
+
+    </div>
+</body>
+</html>
