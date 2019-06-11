@@ -9,7 +9,7 @@ namespace Salarios.Models
     public class Datos
     {
 
-        //Cantidad de ventas 
+        // Cantidad de ventas 
         [Required(ErrorMessage = "Ingresar Monto de Ventas para Jorge Soto")]
         public double Ventas11 { get; set; }
 
@@ -28,7 +28,7 @@ namespace Salarios.Models
          public double Ventas21 = 0;
 
 
-        //Salario Bases
+        // Salario Bases
         public double Base11 = 80000;
         public double Base12 = 87000;
         public double Base13 = 84000;
@@ -36,14 +36,15 @@ namespace Salarios.Models
         public double Base15 = 73000;
         public double Base21 = 187000;
 
-        //Calcula salario Semanal
+        // Calcula salario Semanal
+        // Estos metodos pueden ser invocados desde cualquier parte del codigo en HTML.
         public double Semanal(double value)
         {
             double semanal = (value * 0.2307692307692308);
             return Math.Round(semanal, 2);
         }
 
-        //Calcula las deducciones
+        // Calcula las deducciones
         public double Deducciones(double salario, double comision)
         {
             double deducciones = ((salario + comision)*0.09);
@@ -57,7 +58,7 @@ namespace Salarios.Models
             return Math.Round(neto, 2);
         }
 
-        //Calcula las comisiones
+        // Calcula las comisiones
         public double Comisiones(double value)
         {
             if (value < 30000)

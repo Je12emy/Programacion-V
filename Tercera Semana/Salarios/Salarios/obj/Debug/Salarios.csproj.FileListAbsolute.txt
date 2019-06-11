@@ -110,3 +110,28 @@ C:\Programacion V IIQ 2019\Clase 02\Salarios\Salarios\bin\es\System.Web.Mvc.reso
 C:\Programacion V IIQ 2019\Clase 02\Salarios\Salarios\obj\Debug\Salarios.csprojResolveAssemblyReference.cache
 C:\Programacion V IIQ 2019\Clase 02\Salarios\Salarios\obj\Debug\Salarios.dll
 C:\Programacion V IIQ 2019\Clase 02\Salarios\Salarios\obj\Debug\Salarios.pdb
+C:\Users\Laboratorio\Documents\GitHub\Programacion-V\Tercera Semana\Salarios\Salarios\bin\Salarios.dll.config
+C:\Users\Laboratorio\Documents\GitHub\Programacion-V\Tercera Semana\Salarios\Salarios\bin\Salarios.dll
+C:\Users\Laboratorio\Documents\GitHub\Programacion-V\Tercera Semana\Salarios\Salarios\bin\Salarios.pdb
+C:\Users\Laboratorio\Documents\GitHub\Programacion-V\Tercera Semana\Salarios\Salarios\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Laboratorio\Documents\GitHub\Programacion-V\Tercera Semana\Salarios\Salarios\bin\System.Web.Helpers.dll
+C:\Users\Laboratorio\Documents\GitHub\Programacion-V\Tercera Semana\Salarios\Salarios\bin\System.Web.Mvc.dll
+C:\Users\Laboratorio\Documents\GitHub\Programacion-V\Tercera Semana\Salarios\Salarios\bin\System.Web.Razor.dll
+C:\Users\Laboratorio\Documents\GitHub\Programacion-V\Tercera Semana\Salarios\Salarios\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Laboratorio\Documents\GitHub\Programacion-V\Tercera Semana\Salarios\Salarios\bin\System.Web.Webpages.dll
+C:\Users\Laboratorio\Documents\GitHub\Programacion-V\Tercera Semana\Salarios\Salarios\bin\System.Web.Webpages.Razor.dll
+C:\Users\Laboratorio\Documents\GitHub\Programacion-V\Tercera Semana\Salarios\Salarios\bin\System.Web.Razor.xml
+C:\Users\Laboratorio\Documents\GitHub\Programacion-V\Tercera Semana\Salarios\Salarios\bin\System.Web.Webpages.xml
+C:\Users\Laboratorio\Documents\GitHub\Programacion-V\Tercera Semana\Salarios\Salarios\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Laboratorio\Documents\GitHub\Programacion-V\Tercera Semana\Salarios\Salarios\bin\System.Web.Webpages.Razor.xml
+C:\Users\Laboratorio\Documents\GitHub\Programacion-V\Tercera Semana\Salarios\Salarios\bin\System.Web.Helpers.xml
+C:\Users\Laboratorio\Documents\GitHub\Programacion-V\Tercera Semana\Salarios\Salarios\bin\System.Web.Mvc.xml
+C:\Users\Laboratorio\Documents\GitHub\Programacion-V\Tercera Semana\Salarios\Salarios\bin\es\System.Web.Razor.resources.dll
+C:\Users\Laboratorio\Documents\GitHub\Programacion-V\Tercera Semana\Salarios\Salarios\bin\es\System.Web.Webpages.resources.dll
+C:\Users\Laboratorio\Documents\GitHub\Programacion-V\Tercera Semana\Salarios\Salarios\bin\es\System.Web.Webpages.Deployment.resources.dll
+C:\Users\Laboratorio\Documents\GitHub\Programacion-V\Tercera Semana\Salarios\Salarios\bin\es\System.Web.Webpages.Razor.resources.dll
+C:\Users\Laboratorio\Documents\GitHub\Programacion-V\Tercera Semana\Salarios\Salarios\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Laboratorio\Documents\GitHub\Programacion-V\Tercera Semana\Salarios\Salarios\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Laboratorio\Documents\GitHub\Programacion-V\Tercera Semana\Salarios\Salarios\obj\Debug\Salarios.csprojResolveAssemblyReference.cache
+C:\Users\Laboratorio\Documents\GitHub\Programacion-V\Tercera Semana\Salarios\Salarios\obj\Debug\Salarios.dll
+C:\Users\Laboratorio\Documents\GitHub\Programacion-V\Tercera Semana\Salarios\Salarios\obj\Debug\Salarios.pdb

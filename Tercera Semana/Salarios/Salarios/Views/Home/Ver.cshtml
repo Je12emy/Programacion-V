@@ -27,8 +27,12 @@
             <tr>
                 <th>Jorge Soto</th>
                 @*<th>18000</th>*@
+
+                <!-- LLama dentro del modelo a los datos deseados. -->            
                 <th>@Model.Semanal(Model.Base11)</th>
+                
                 <th>@Model.Comisiones(Model.Ventas11)</th>
+                <!-- Llama a los metodos dentro del Modelo y le pasa como parametros otros datos dentro del modelo. -->
                 <th>@Model.Deducciones(Model.Semanal(Model.Base11), Model.Comisiones(Model.Ventas11))</th>
                 <th>@Model.Neto(Model.Semanal(Model.Base11), Model.Comisiones(Model.Ventas11), (Model.Deducciones(Model.Semanal(Model.Base11), Model.Comisiones(Model.Ventas11))) )</th>
             </tr>
