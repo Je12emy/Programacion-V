@@ -1,0 +1,81 @@
+﻿@model MVC_Ventas.Models.Workers
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-grid.css" rel="stylesheet" />
+    <link href="~/scripts/Styles/main.css" rel="stylesheet" />
+
+    <meta name="viewport" content="width=device-width" />
+    <title>Datos</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center"><h1 class="display-1"> Datos de la Planilla </h1>  </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <!-- Fila de encabezado -->
+                            <th scope="col">Codigo</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Semanal</th>
+                            <th scope="col">Deduccion</th>
+                            <th scope="col">Comision</th>
+                            <th scope="col">Neto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row"> @Model.code[0]</th>
+                            <td> @Model.name[0] </td>
+                            <td> @Model.semanal(@Model.sales[0]) </td>
+                            <td> @Model.comision(@Model.sales[0]) </td>
+                            <td> @Model.deduccion(@Model.salary[0], @Model.sales[0]) </td>
+                            <td> @Model.neto(@Model.salary[0], @Model.comision(@Model.sales[0]), @Model.deduccion(@Model.salary[0], @Model.sales[0])) </td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row"> @Model.code[1]</th>
+                            <td> @Model.name[1] </td>
+                            <td> @Model.semanal(@Model.sales[1]) </td>
+                            <td> @Model.comision(@Model.sales[1]) </td>
+                            <td> @Model.deduccion(@Model.salary[1], @Model.sales[1]) </td>
+                            <td> @Model.neto(@Model.salary[1], @Model.comision(@Model.sales[1]), @Model.deduccion(@Model.salary[1], @Model.sales[1])) </td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row"> @Model.code[2]</th>
+                            <td> @Model.name[2] </td>
+                            <td> @Model.semanal(@Model.sales[2]) </td>
+                            <td> @Model.comision(@Model.sales[2]) </td>
+                            <td> @Model.deduccion(@Model.salary[2], @Model.sales[2]) </td>
+                            <td> @Model.neto(@Model.salary[2], @Model.comision(@Model.sales[2]), @Model.deduccion(@Model.salary[2], @Model.sales[2])) </td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row"> @Model.code[3]</th>
+                            <td> @Model.name[3] </td>
+                            <td> @Model.semanal(@Model.sales[3]) </td>
+                            <td> @Model.comision(@Model.sales[3]) </td>
+                            <td> @Model.deduccion(@Model.salary[3], @Model.sales[3]) </td>
+                            <td> @Model.neto(@Model.salary[3], @Model.comision(@Model.sales[3]), @Model.deduccion(@Model.salary[3], @Model.sales[3])) </td>                           
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

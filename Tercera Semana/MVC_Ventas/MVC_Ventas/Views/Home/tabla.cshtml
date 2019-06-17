@@ -1,0 +1,104 @@
+﻿@model MVC_Ventas.Models.Workers
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-grid.css" rel="stylesheet" />
+    <link href="~/scripts/Styles/main.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>tabla</title>
+</head>
+<body>
+    <div> 
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="display-1 text-center text-capitalize"> Registro de Ventas </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div style="text-align:center; margin-top:32px;">
+
+                        <!-- Form para el metodo de POST de este View -->
+                        @using (Html.BeginForm())
+                        {
+                        @Html.ValidationSummary()
+
+                        <!-- Tabla para mostrar los datos -->
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <!-- Fila de encabezado -->
+                                        <th scope="col">Codigo</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Rol</th>
+                                        <th scope="col">Salario Base</th>
+                                        <th scope="col">Ventas</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- En cada TableRow se mostrar la informacion de cada empleado -->
+                                    <tr>
+                                        <th scope="row">@Model.code[0]</th>
+                                        <td> @Model.name[0] </td>
+                                        <td> @Model.role[0] </td>
+                                        <td> @Model.salary[0] </td>
+                                        <!-- Este Table Data es para ingresar el dato sobre las ventas. -->
+                                        <!-- TextBoxFor([modelo],null,[Atributos HTML]) -->
+
+                                        <td> @Html.TextBoxFor(x => x.sales[0],"", new { @class = "form-control text-center" }) </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">@Model.code[1]</th>
+                                        <td>@Model.name[1]</td>
+                                        <td>@Model.role[1]</td>
+                                        <td> @Model.salary[1] </td>
+                                        <!-- Este Table Data es para ingresar el dato sobre las ventas. -->
+                                        <td> @Html.TextBoxFor(x => x.sales[1],"", new { @class = "form-control text-center" }) </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">@Model.code[2]</th>
+                                        <td> @Model.name[2]</td>
+                                        <td> @Model.role[2]</td>
+                                        <td> @Model.salary[2] </td>
+                                        <!-- Este Table Data es para ingresar el dato sobre las ventas. -->
+                                        <td> @Html.TextBoxFor(x => x.sales[2], "", new { @class = "form-control text-center" }) </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">@Model.code[3]</th>
+                                        <td> @Model.name[3]</td>
+                                        <td> @Model.role[3]</td>
+                                        <td> @Model.salary[3] </td>
+                                        <!-- Este Table Data es para ingresar el dato sobre las ventas. -->
+                                        <td> @Html.TextBoxFor(x => x.sales[3], "", new { @class = "form-control text-center" }) </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">@Model.code[4]</th>
+                                        <td> @Model.name[4]</td>
+                                        <td> @Model.role[4]</td>
+                                        <td> @Model.salary[4] </td>
+                                        <td class="text-danger text-capitalize"> No Aplica </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <input type="submit" class="btn btn-outline-dark" value="Solicitar Datos"/>
+                        }
+
+                   
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

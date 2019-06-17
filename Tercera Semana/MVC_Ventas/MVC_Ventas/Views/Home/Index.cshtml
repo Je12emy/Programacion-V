@@ -15,65 +15,12 @@
     <title>Registro de Ventas</title>
 </head>
 <body>
-    <div class="container">
+  <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="display-1 text-center text-capitalize"> Registro de Ventas </h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <div style="text-align:center; margin-top:32px;">
-                    <!-- Tabla para mostrar los datos -->
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <!-- Fila de encabezado -->
-                                <th scope="col">Codigo</th>
-                                <th scope="col">Nombre</th>
-                                <th scope="col">Rol</th>
-                                <th scope="col">Salario Base</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- En cada TableRow se mostrar la informacion de cada empleado -->
-                            <tr>
-                                <th scope="row">@Model.code[0]</th>
-                                <td> @Model.name[0] </td>
-                                <td> @Model.role[0] </td>
-                                <td> @Model.salary[0] </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">@Model.code[1]</th>
-                                <td>@Model.name[1]</td>
-                                <td>@Model.role[1]</td>
-                                <td> @Model.salary[1] </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">@Model.code[2]</th>
-                                <td> @Model.name[2]</td>
-                                <td> @Model.role[2]</td>
-                                <td> @Model.salary[2] </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">@Model.code[3]</th>
-                                <td> @Model.name[3]</td>
-                                <td> @Model.role[3]</td>
-                                <td> @Model.salary[3] </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    @Html.ActionLink("Modificar Datos", "Configuracion", this.Model
-                          //new   //Pasar este modelo como parametro para la clase dentro del controlador.
-                          //{
-                          //    w = this.Model
-
-                   //}
-                   )
-                    
+                <h1 class="display-4 text-center"> @Html.ActionLink("Ingresar","tabla") </h1>
                 </div>
             </div>
-        </div>
-    </div>
+      </div>
 </body>
 </html>
