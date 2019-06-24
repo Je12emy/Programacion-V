@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="@Url.Content("~/Content/")main.css" rel="stylesheet" type="text/css"/>
+    <link href="@Url.Content("~/Content/")bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="@Url.Content("~/Content/")bootstrap-grid.min.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @RenderBody()
+    <div class="text-center"> 
+        <h1 class="display-1 text-center"> Welcome </h1>
+        @Html.ActionLink("Get my interest rate", "Calculate")
+    </div>
+</body>
+</html>

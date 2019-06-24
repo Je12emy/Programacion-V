@@ -1,0 +1,24 @@
+﻿@model Interest_rates.Models.Interest
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Results</title>
+</head>
+<body>
+    <div>
+        @RenderBody()
+         <h1 class="display-4"> Here are your results </h1>
+         <p> @Model.Name , we estimate your interest is at @Model.GetInterest(@Model.StartingAmmount, @Model.InterestRate, @Model.time)</p>
+         <p> this means you must pay a total of @Model.GetTotal( Model.GetInterest(@Model.StartingAmmount, @Model.InterestRate, @Model.time),Model.StartingAmmount)
+         <br>
+             @Html.ActionLink("Go Home","Index","",new { @style = "Text-aling:center"})  
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+﻿@model Interest_rates.Models.Interest
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="@Url.Content("~/Content/")main.css" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/")bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/")bootstrap-grid.min.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Calculate</title>
+</head>
+<body>
+    @RenderBody()
+    <div class="container">
+        <div class="row">
+
+            @using (Html.BeginForm())
+            {
+                @Html.ValidationSummary()
+                <div class="col-12">
+                    <label for="name"> Name </label>
+                    <br>
+                    @Html.TextBoxFor(x => x.Name, "", new { @class = "form_input", @id = "name",@placeholder="Write down your name", @size = "30"})
+                </div>
+
+                <div class="col-12">
+                    <label for="capital"> Starting Ammount </label>
+                    <br>
+                    @Html.TextBoxFor(x => x.StartingAmmount, "", new { @class = "form_input", @id = "capital", @placeholder = "Write the flat debt ammount.", @size = "30" })
+                </div>
+
+                    <div class="col-12">
+                        <label for="rate"> Interest Rate </label>
+                        <br>
+                        @Html.TextBoxFor(x => x.InterestRate, "", new { @class = "form_input", @id = "rate", @placeholder = "Write down the interest rate.", @size = "30" })
+                    </div>
+                    <div class="col-12">
+                        <label for="time"> Time (in days) </label>
+                        <br>
+                        @Html.TextBoxFor(x => x.time, "", new { @class = "form_input", @id = "time", @placeholder = "Write down the time in days.", @size = "30" })
+                    </div>
+
+                    <div class="col-12"><input type="reset" value="Resset" class="m-1"/> <input type="submit" value="Get my Interest rate!" /></div>
+            }
+            
+
+        </div>
+    </div>
+</body>
+</html>
