@@ -1,0 +1,32 @@
+﻿@model Libreria.Models.tradicional
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Pedido de Libro</title>
+</head>
+<body>
+    <div>
+        @Html.ActionLink("Hogar", "Index")
+        <h1> Orden Realizada </h1>
+        <p> Hemos recibido tu pedido por el libro:</p>
+        <ul>
+            <li> Titulo del Libro: @Model.titulo  </li>
+            <li> Autor del Libro: @Model.nombre </li>
+            <li> Direccion de Envio: @Model.direccion </li>
+            <li> Precio Neto: @Model.precioCompra </li>
+            <li> Flete por adquisicion: @Model.GetPrecioVenta(Model.precioCompra) </li>
+            <li> Flete por peso del Libro: @Model.BsPeso(Model.peso) </li>
+            <li> Flete por tipo de envio: @Model.FleteEnvio(Model.precioCompra,Model.tipoEnvio) </li>           
+        </ul>
+        <hr>
+        <b style="text-align:right"> Precio Total: @Model.GetTotal(Model.precioCompra, Model.peso, Model.tipoEnvio) </b>
+    </div>
+</body>
+</html>

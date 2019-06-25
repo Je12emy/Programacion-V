@@ -1,0 +1,72 @@
+﻿@model Libreria.Models.tradicional
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Orden Tradicional</title>
+</head>
+<body>
+    @Html.ActionLink("Hogar","Index")
+    <div style="text-align:center">
+        @using (Html.BeginForm()) {
+            @Html.ValidationSummary()
+            <h1> Libro de Tipo Tradicional </h1>
+            <h2> Ingrese los datos del Libro </h2>
+
+
+            <!-- Form para los Datos del libro de tipo Tradicional -->
+            <label for="codigo"> Codigo del Libro </label>
+            <br>
+            @Html.TextBoxFor(x => x.codigo, "", new { @placeholder = "Ingrese el Codigo del Libro" , @size = "32", @id = "codigo"})
+            <br>
+            <br>
+            <label for="titulo"> Titulo del Libro </label>
+            <br>
+            @Html.TextBoxFor(x => x.titulo, "", new { @placeholder = "Ingrese el Titulo del Libro", @size = "32", @id = "titulo" })
+            <br>
+            <br>
+            <label for="autor"> Autor del Libro </label>
+            <br>
+            @Html.TextBoxFor(x => x.nombre, "", new { @placeholder = "Ingrese el Nombre del Auto del Libro", @size = "32", @id = "autor" })
+            <br>
+            <br>
+            <label for="direccion"> Direccion de Envio </label>
+            <br>
+            @Html.TextBoxFor(x => x.direccion, "", new { @placeholder = "Ingrese la Direccion de envio para el Libro", @size = "32", @id = "direccion" })
+            <br>
+            <br>
+            <label for="neto"> Precio Neto </label>
+            <br>
+            @Html.TextBoxFor(x => x.precioCompra, "", new { @placeholder = "Ingrese el Precio Neto del Libro", @size = "32", @id = "neto" })
+            <br>
+            <br>
+            <label for="peso"> Peso del Libro </label>
+            <br>
+            @Html.TextBoxFor(x => x.peso, "", new { @placeholder = "Ingrese el peso Neto (en kg) del Libro", @size = "32", @id = "peso" })
+            <br>
+            <br>
+            <label for="envio"> Tipo de Envio </label>
+            <br>
+            @Html.DropDownListFor(x => x.tipoEnvio, new[] {
+           new SelectListItem() { Text = "Nacional.", Value = bool.FalseString},
+           new SelectListItem() { Text = "Internacional.", Value = bool.TrueString},
+       }, new {@id = "envio" } )
+            <br>
+            <br>
+
+            <input type="reset" value="Limpiar">
+            <input type="submit" value="Realizar Pedido">
+        }
+           
+
+
+
+    </div>
+</body>
+</html>

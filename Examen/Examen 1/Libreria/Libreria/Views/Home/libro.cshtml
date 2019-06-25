@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>libro</title>
+</head>
+<body>
+    <div style="text-align:center">
+        @Html.ActionLink("Hogar", "Index")
+         <h3 class="display-3"> Seleccione un tipo de libro </h3>
+         <ul style="text-align:center; list-style:none">
+             <li> @Html.ActionLink("Libro Tradicinal.","tradicional","", new {@style = "text-align:left" }) </li>
+             <li> @Html.ActionLink("Libro Digital.","digital", "", new { @style = "text-align:left" }) </li>
+         </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿@model Libreria.Models.digital
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Digital_Factura</title>
+</head>
+<body>
+    <div>
+        @Html.ActionLink("Hogar", "Index")
+        <h1> Orden Realizada </h1>
+        <p> Hemos recibido tu pedido por el libro:</p>
+        <ul>
+            <li> Titulo del Libro: @Model.titulo  </li>
+            <li> Autor del Libro: @Model.nombre </li>
+            <li> Direccion de Envio: @Model.tamaño MB </li> 
+            <li> Precio Neto: @Model.precioCompra </li>  
+            <li> Flete por Hosting: @Model.FleteTamaño(Model.precioCompra,Model.tamaño) </li>
+            <li> Flete de adquisision: @Model.GetPrecioVenta(Model.precioCompra) </li>   
+        </ul>
+        <hr>
+        <b> Precio Total: @Model.GetTotal(Model.precioCompra, Model.tamaño) </b>
+    </div>
+</body>
+</html>
