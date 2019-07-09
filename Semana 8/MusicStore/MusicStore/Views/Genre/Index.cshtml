@@ -1,0 +1,44 @@
+﻿@model MusicStore.Models.Genre
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+
+        <div>
+            <h2> Vista de Generos </h2>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <td> Codigo </td>
+                    <td> Genero </td>
+                    <td> Descripcion </td>
+                </tr>
+
+                @for (int i = 0; i < @Model.Tabla.Rows.Count; i++)
+                {
+                    <tr>
+                        <td> @Model.Tabla.Rows[i][0] </td>
+                        <td> @Model.Tabla.Rows[i][1] </td>
+                        <td> @Model.Tabla.Rows[i][2] </td>
+                    </tr>
+
+                }
+            </table>
+            @Html.ActionLink("Insertar", "Insertar");
+            @Html.ActionLink("Modificar", "Modificar");
+           
+        </div>
+    </div>
+</body>
+</html>
