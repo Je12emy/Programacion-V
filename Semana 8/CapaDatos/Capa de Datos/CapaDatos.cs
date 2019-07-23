@@ -42,5 +42,30 @@ namespace Capa_de_Datos
                 // En el mundo real mostrar el mensaje de error no es lo optimo, pues puede ser informacion sensible.
             }
         }
+        public int EjecutarSentencia(StringBuilder Query, SqlCommand Comando) {
+            // Es mejor usar parametros especificos para evitar vulnerabilidades.
+            int resultado = 0;
+
+            try
+            {
+                Conexion.Open();
+                Comando.Connection = Conexion;
+                Comando.CommandType = CommandType.Text;
+                Comando.CommandText = Query.ToString();
+
+                resultado = Comando.ExecuteNonQuery();
+                // Captura el numero de fials afectadas por este comando.
+
+                Conexion.Close();
+
+                return resultado;
+            }
+            catch (Exception ex)
+            {
+                Conexion.Close();
+                throw new Exception("Error en Capa de Datos: " + ex);
+            }
+
+        }
     }
 }
