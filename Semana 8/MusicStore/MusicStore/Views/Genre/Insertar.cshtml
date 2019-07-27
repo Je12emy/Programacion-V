@@ -1,0 +1,46 @@
+﻿@model MusicStore.Models.Genre
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Insertar</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <div>
+
+                <h4> Insertar </h4>
+                <hr />
+
+                <div>
+                    <label> Nombre </label>
+                    <div>
+                        @Html.TextBoxFor(model => model.Nombre)
+                    </div>
+
+                    <label> Descripcion </label>
+                    <div>
+                        @Html.TextBoxFor(model => model.Descripcion)
+                    </div>
+
+                </div>
+
+                <input type="submit" name="Insertar" />
+            </div>
+            <label> @ViewBag.mensaje </label>
+
+            <div>
+                @Html.ActionLink("Regresar a la Lista", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>

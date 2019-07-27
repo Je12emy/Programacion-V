@@ -1,0 +1,34 @@
+﻿@model MusicStore.Models.Genre
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Modificar</title>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm())
+        {
+            <label> Id de Genero </label>
+            @Html.TextBoxFor(Model => Model.Id)
+
+            <br>
+            <label> Nombre </label>
+            @Html.TextBoxFor(Model => Model.Nombre)
+            <br>
+
+            <label> Descripcion </label>
+            @Html.TextBoxFor(Model => Model.Descripcion)
+            <input type="submit" name="Modificar">
+            <input type="reset" name="Limpiar">
+        }
+      
+    </div>
+</body>
+</html>
