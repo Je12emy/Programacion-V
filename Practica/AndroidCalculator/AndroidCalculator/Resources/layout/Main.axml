@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/numero1" />
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/numero2"
+        android:textAlignment="center" />
+    <Button
+        android:text="Sumar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sumar" />
+    <Button
+        android:text="Multplicar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/multiplicar" />
+    <Button
+        android:text="Dividir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dividir" />
+    <Button
+        android:text="Elevar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/elevar" />
+    <Button
+        android:text="Limpiar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/limpiar" />
+</LinearLayout>
