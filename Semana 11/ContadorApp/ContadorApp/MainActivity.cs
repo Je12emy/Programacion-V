@@ -8,9 +8,9 @@ namespace ContadorApp
     public class MainActivity : Activity
     {
         int contador = 0;
-        protected override void OnCreate(Bundle bundle)
+        protected override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(bundle);
+            base.OnCreate(savedInstanceState);
 
             // Set our view from the "main" layout resource
             SetContentView (Resource.Layout.Main);
