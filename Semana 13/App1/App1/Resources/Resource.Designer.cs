@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("Phone.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("App1.Resource", IsApplication=true)]
 
-namespace Phone
+namespace App1
 {
 	
 	
@@ -60,20 +60,14 @@ namespace Phone
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050003
-			public const int CallButton = 2131034115;
-			
-			// aapt resource value: 0x7f050004
-			public const int CallHistoryButton = 2131034116;
+			// aapt resource value: 0x7f050000
+			public const int button1 = 2131034112;
 			
 			// aapt resource value: 0x7f050001
-			public const int PhoneNumberText = 2131034113;
+			public const int textView1 = 2131034113;
 			
 			// aapt resource value: 0x7f050002
-			public const int TranslateButton = 2131034114;
-			
-			// aapt resource value: 0x7f050000
-			public const int ViewText = 2131034112;
+			public const int textView2 = 2131034114;
 			
 			static Id()
 			{
@@ -89,7 +83,10 @@ namespace Phone
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int layout1 = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int Main = 2130903041;
 			
 			static Layout()
 			{
@@ -109,9 +106,6 @@ namespace Phone
 			
 			// aapt resource value: 0x7f040000
 			public const int Hello = 2130968576;
-			
-			// aapt resource value: 0x7f040002
-			public const int callHistory = 2130968578;
 			
 			static String()
 			{
